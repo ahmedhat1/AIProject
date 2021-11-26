@@ -82,6 +82,7 @@ public class Grid {
 
                 Pad pad1 = new Pad(pad1X, pad1Y, pad2X, pad2Y);
                 Pad pad2 = new Pad(pad2X, pad2Y, pad1X, pad1Y);
+                
                 grid[pad1X][pad1Y] = pad1;
                 grid[pad2X][pad2Y] = pad2;
                 

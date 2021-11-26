@@ -6,6 +6,7 @@ public class Helpers {
     public static int genRandomNumber(int min, int max) {
         Random random = new Random();
         int randomNumber = random.nextInt(max + 1 - min) + min;
+        
         return randomNumber;
     }
 

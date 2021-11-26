@@ -9,5 +9,6 @@ public class Pad {
         this.y = y;
         this.goesToX = goesToX;
         this.goesToY = goesToY;
+        
     }
 }
