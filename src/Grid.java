@@ -68,13 +68,13 @@ public class Grid {
             pads = new ArrayList<Pad>();
             if (numberOfPads % 2 != 0)
                 numberOfPads--;
-            ArrayList slots = Helpers.returnEmptySlots(grid);
+            ArrayList<int[]> slots = Helpers.returnEmptySlots(grid);
             Collections.shuffle(slots);
-            for (int i = 0; i < numberOfPads; i=i+2) {
+            for (int i = 0; i < numberOfPads/2; i=i+2) {
 
-                int [] slot1 = (int[]) slots.remove(0);
-                int [] slot2 = (int[]) slots.remove(0);
-
+                int [] slot1 = (int[]) slots.get(i);
+                int [] slot2 = (int[]) slots.get(i+1);
+                
                 int pad1X = slot1[0];
                 int pad1Y = slot1[1];
                 int pad2X = slot2[0];
@@ -84,6 +84,7 @@ public class Grid {
                 Pad pad2 = new Pad(pad2X, pad2Y, pad1X, pad1Y);
                 grid[pad1X][pad1Y] = pad1;
                 grid[pad2X][pad2Y] = pad2;
+                
                 pads.add(pad1);
                 pads.add(pad2);
             }
